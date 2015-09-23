@@ -1,12 +1,11 @@
-"""This is a comentary"""
+"""This code is a game of random numbers"""
 import random
-import os, sys
 #This is the variable where is stored the random number
-answer = "Y" 
-while answer== "Y" or answer == "y":
-    count = 0
+ANSWER = "Y"
+while ANSWER == "Y" or ANSWER == "y":
+    COUNT = 0
     NUMBER = random.randrange(1, 21)
-    while count <= 3:
+    while COUNT <= 3:
         try:
             print NUMBER
             print ""
@@ -14,7 +13,7 @@ while answer== "Y" or answer == "y":
             print ""
             print"-------------------------------"
             GUESS = int(raw_input("Enter a number from 1 to 20: "))
-            count = count + 1
+            COUNT = COUNT + 1
             #number that enters the user
             if GUESS <= 0 or GUESS > 20:
                 print "You need to enter a number between 1 to 20"
@@ -24,10 +23,9 @@ while answer== "Y" or answer == "y":
                 print "you guess a number to low, please try again"
             elif GUESS == NUMBER:
                 print "You win"
-                count = 4
+                COUNT = 4
         except ValueError:
             print "You don't know what is a number?"
-            count = count + 1
-    else:
-        count > 3
-    answer = raw_input("Do you want to play again? Y/N: ")
+            COUNT = COUNT + 1
+    ANSWER = raw_input("Do you want to play again? Y/N: ")
+
