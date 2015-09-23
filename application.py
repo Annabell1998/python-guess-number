@@ -7,8 +7,6 @@ while ANSWER == "Y" or ANSWER == "y":
     NUMBER = random.randrange(1, 21)
     while COUNT <= 3:
         try:
-            print NUMBER
-            print ""
             print ""
             print ""
             print"-------------------------------"
